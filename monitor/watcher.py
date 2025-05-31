@@ -7,7 +7,7 @@ import sqlite3, asyncio, time
 
 api_id = int(os.getenv("TELEGRAM_API_ID"))
 api_hash = os.getenv("TELEGRAM_API_HASH")
-session_name = 'monitor/session/user'
+session_name = os.path.abspath('monitor/session/user')
 
 def get_data():
     conn = sqlite3.connect('data/botdata.db')
